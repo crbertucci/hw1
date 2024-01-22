@@ -106,6 +106,7 @@
 -- Drop existing tables, so you'll start fresh each time this script is run.
 -- TODO!
 
+
 -- Create new tables, according to your domain model
 -- TODO!
 
@@ -121,6 +122,8 @@
 -- The SQL statement for the movies output
 -- TODO!
 
+SELECT title FROM movies;
+
 -- Prints a header for the cast output
 .print ""
 .print "Top Cast"
@@ -130,3 +133,4 @@
 
 -- The SQL statement for the cast output
 -- TODO!
+
