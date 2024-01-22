@@ -5,7 +5,7 @@
 
 -- Requirements/assumptions
 --
--- - There will only be three movies in the database – the three films
+-- - There will only be three movies in the database – the three films
 --   that make up Christopher Nolan's Batman trilogy.
 -- - Movie data includes the movie title, year released, MPAA rating,
 --   and studio.
@@ -24,7 +24,6 @@
 -- - As a guest, I want to see the movies which a single actor has acted in.
 -- * Note: The "guest" user role represents the experience prior to logging-in
 --   to an app and typically does not have a corresponding database table.
-
 
 -- Deliverables
 -- 
@@ -108,7 +107,6 @@
 
 DROP TABLE IF EXISTS movies;
 DROP TABLE IF EXISTS actors;
-DROP TABLE IF EXISTS studios;
 DROP TABLE IF EXISTS characters;
 DROP TABLE IF EXISTS roles;
 
@@ -120,17 +118,12 @@ CREATE TABLE movies (
      title TEXT,
      year_released INTEGER,
      rating TEXT,
-     studio_id INTEGER
+     studio TEXT
 );
 
 CREATE TABLE actors (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
      actor_name TEXT
-);
-
-CREATE TABLE studios (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-     studio_name TEXT
 );
 
 CREATE TABLE roles (
@@ -149,6 +142,37 @@ CREATE TABLE characters (
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
 
+INSERT INTO movies (title, year_released, rating, studio)
+VALUES ("Batman Begins","2005", "PG-13", "Warner Bros.");
+
+INSERT INTO movies (title, year_released, rating, studio)
+VALUES ("The Dark Knight","2008","PG-13","Warner Bros.");
+
+INSERT INTO movies (title, year_released, rating, studio)
+VALUES ("The Dark Knight Rises", "2012" ,"PG-13","Warner Bros.");
+
+INSERT INTO characters (character_name) 
+VALUES ('Bruce Wayne');
+
+INSERT INTO characters (character_name) 
+VALUES ('Alfred')
+
+INSERT INTO characters (character_name) 
+VALUES ("Ra's Al Ghul")
+
+INSERT INTO characters (character_name) 
+VALUES ('Rachel Dawes')
+
+INSERT INTO characters (character_name) 
+VALUES ('Commissioner Gordon')
+
+INSERT INTO characters (character_name) 
+VALUES ('Joker')
+
+INSERT INTO characters (character_name) 
+VALUES ('Harvey Dent')
+
+
 -- Prints a header for the movies output
 .print "Movies"
 .print "======"
@@ -157,7 +181,7 @@ CREATE TABLE characters (
 -- The SQL statement for the movies output
 -- TODO!
 
-SELECT title FROM movies;
+SELECT title, year_released, rating, studio FROM movies;
 
 -- Prints a header for the cast output
 .print ""
@@ -165,7 +189,5 @@ SELECT title FROM movies;
 .print "========"
 .print ""
 
-
 -- The SQL statement for the cast output
 -- TODO!
-
