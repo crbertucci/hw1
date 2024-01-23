@@ -197,6 +197,44 @@ INSERT INTO characters (character_name)
 VALUES ('Harvey Dent');
 
 
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('1', '1');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('1', '2');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('1', '3');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('1', '4' );
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('1', '5');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('2', '1');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('2', '6');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('2', '7');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('2', '2');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('2', '8');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('3', '1');
+
+INSERT INTO roles (movie.id, actor.id, character.id)
+VALUES('3', '5');
+
+
+        
 
 -- Prints a header for the movies output
 .print "Movies"
