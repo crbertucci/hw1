@@ -137,7 +137,6 @@ CREATE TABLE roles (
      character_id INTEGER
 );
 
-
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
@@ -197,44 +196,42 @@ INSERT INTO characters (character_name)
 VALUES ('Harvey Dent');
 
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('1', '1');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('1', '1', '1');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('1', '2');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('1', '2', '2');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('1', '3');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('1', '3', '3');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('1', '4' );
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('1', '4', '4');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('1', '5');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('1', '5', '5');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('2', '1');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('2', '1', '1');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('2', '6');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('2', '6', '6');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('2', '7');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('2', '7', '7');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('2', '2');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('2', '2', '2');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('2', '8');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('2', '8', '4');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('3', '1');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('3', '1', '1');
 
-INSERT INTO roles (movie.id, actor.id, character.id)
-VALUES('3', '5');
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('3', '5', '5');
 
-
-        
 
 -- Prints a header for the movies output
 .print "Movies"
@@ -254,8 +251,5 @@ SELECT title, year_released, rating, studio FROM movies;
 
 -- The SQL statement for the cast output
 -- TODO!
-SELECT id, title FROM movies;
 
-SELECT id, actor_name FROM actors;
-
-SELECT id, character_name FROM characters;
+SELECT movie_id, actor_id, character_id FROM roles;
