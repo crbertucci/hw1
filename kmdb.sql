@@ -174,6 +174,15 @@ VALUES ("Aaron Eckhart");
 INSERT INTO actors (actor_name)
 VALUES ("Maggie Gyllenhaal");
 
+INSERT INTO actors (actor_name)
+VALUES ("Tom Hardy");
+
+INSERT INTO actors (actor_name)
+VALUES ("Joseph Gordon-Levitt");
+
+INSERT INTO actors (actor_name)
+VALUES ("Anne Hathaway");
+
 INSERT INTO characters (character_name) 
 VALUES ('Bruce Wayne');
 
@@ -194,6 +203,15 @@ VALUES ('Joker');
 
 INSERT INTO characters (character_name) 
 VALUES ('Harvey Dent');
+
+INSERT INTO characters (character_name) 
+VALUES ('Bane');
+
+INSERT INTO characters (character_name) 
+VALUES ('John Blake');
+
+INSERT INTO characters (character_name) 
+VALUES ('Selina Kyle');
 
 
 INSERT INTO roles (movie_id, actor_id, character_id)
@@ -232,6 +250,15 @@ VALUES('3', '1', '1');
 INSERT INTO roles (movie_id, actor_id, character_id)
 VALUES('3', '5', '5');
 
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('3', '9', '8');
+
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('3', '10', '9');
+
+INSERT INTO roles (movie_id, actor_id, character_id)
+VALUES('3', '11', '10');
+
 
 -- Prints a header for the movies output
 .print "Movies"
@@ -252,7 +279,8 @@ SELECT title, year_released, rating, studio FROM movies;
 -- The SQL statement for the cast output
 -- TODO!
 
-SELECT roles.movie_id
-FROM roles;
 
-
+SELECT movies.title, actors.actor_name, characters.character_name 
+FROM roles INNER JOIN movies ON movies.id = roles.movie_id
+INNER JOIN actors ON actors.id = roles.actor_id
+INNER JOIN characters ON characters.id = roles.character_id;
