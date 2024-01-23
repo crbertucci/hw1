@@ -151,26 +151,52 @@ VALUES ("The Dark Knight","2008","PG-13","Warner Bros.");
 INSERT INTO movies (title, year_released, rating, studio)
 VALUES ("The Dark Knight Rises", "2012" ,"PG-13","Warner Bros.");
 
+INSERT INTO actors (actor_name)
+VALUES ("Christian Bale");
+
+INSERT INTO actors (actor_name)
+VALUES ("Michael Caine");
+
+INSERT INTO actors (actor_name)
+VALUES ("Liam Neeson");
+
+INSERT INTO actors (actor_name)
+VALUES ("Katie Holmes");
+
+INSERT INTO actors (actor_name)
+VALUES ("Gary Oldman");
+
+INSERT INTO actors (actor_name)
+VALUES ("Heath Ledger");
+
+INSERT INTO actors (actor_name)
+VALUES ("Aaron Eckhart");
+
+INSERT INTO actors (actor_name)
+VALUES ("Maggie Gyllenhaal");
+
 INSERT INTO characters (character_name) 
 VALUES ('Bruce Wayne');
 
-INSERT INTO characters (character_name) 
-VALUES ('Alfred')
+INSERT INTO characters (character_name)
+VALUES ('Alfred');
 
 INSERT INTO characters (character_name) 
-VALUES ("Ra's Al Ghul")
+VALUES ("Ra's Al Ghul");
 
 INSERT INTO characters (character_name) 
-VALUES ('Rachel Dawes')
+VALUES ('Rachel Dawes');
 
 INSERT INTO characters (character_name) 
-VALUES ('Commissioner Gordon')
+VALUES ('Commissioner Gordon');
 
 INSERT INTO characters (character_name) 
-VALUES ('Joker')
+VALUES ('Joker');
 
 INSERT INTO characters (character_name) 
-VALUES ('Harvey Dent')
+VALUES ('Harvey Dent');
+
+INSERT INTO 
 
 
 -- Prints a header for the movies output
@@ -188,6 +214,8 @@ SELECT title, year_released, rating, studio FROM movies;
 .print "Top Cast"
 .print "========"
 .print ""
+
+SELECT character_name FROM characters;
 
 -- The SQL statement for the cast output
 -- TODO!
