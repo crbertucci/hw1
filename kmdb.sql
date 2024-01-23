@@ -252,4 +252,7 @@ SELECT title, year_released, rating, studio FROM movies;
 -- The SQL statement for the cast output
 -- TODO!
 
-SELECT movie_id, actor_id, character_id FROM roles;
+SELECT roles.movie_id
+FROM roles;
+
+
