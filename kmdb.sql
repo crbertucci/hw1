@@ -125,19 +125,19 @@ CREATE TABLE actors (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
      actor_name TEXT
 );
-
-CREATE TABLE roles (
-     id INTEGER PRIMARY KEY AUTOINCREMENT,
-     actor_id INTEGER,
-     movie_id INTEGER,
-     character_id INTEGER
-);
-
 CREATE TABLE characters (
      id INTEGER PRIMARY KEY AUTOINCREMENT,
      character_name TEXT
-
 );
+
+CREATE TABLE roles (
+     id INTEGER PRIMARY KEY AUTOINCREMENT,
+     movie_id INTEGER,
+     actor_id INTEGER,
+     character_id INTEGER
+);
+
+
 -- Insert data into your database that reflects the sample data shown above
 -- Use hard-coded foreign key IDs when necessary
 -- TODO!
@@ -196,7 +196,6 @@ VALUES ('Joker');
 INSERT INTO characters (character_name) 
 VALUES ('Harvey Dent');
 
-INSERT INTO 
 
 
 -- Prints a header for the movies output
@@ -215,7 +214,10 @@ SELECT title, year_released, rating, studio FROM movies;
 .print "========"
 .print ""
 
-SELECT character_name FROM characters;
-
 -- The SQL statement for the cast output
 -- TODO!
+SELECT id, title FROM movies;
+
+SELECT id, actor_name FROM actors;
+
+SELECT id, character_name FROM characters;
